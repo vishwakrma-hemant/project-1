@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;
+        padding:0;
+        }
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background-color:gray;
+        }
+        .karma{
+            height:415px;
+            width:315px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border-radius:20px;
+            position:relative;
+            box-shadow: 5px 5px 60px 10px rgb(107, 105, 105);
+            overflow: hidden;
+            background-color: rgb(218, 218, 201);
+        }
+        .karma::before{
+            content:" ";
+            position:absolute;
+            background-image:conic-gradient(red,green,blue,yellow);
+            width:185px;
+            border-radius:20px;
+            height:160%;
+            animation: keey 1.2s linear infinite;
+            
+        }
+        @keyframes keey {
+            100%{transform: rotate(360deg);}
+            
+        }
+        .container{
+            height:400px;
+            width :300px;
+            position: relative;
+            border-radius:20px;
+            background-color: rgb(66, 66, 66);
+            /* background-image:conic-gradient(rgb(194, 54, 54),rgb(84, 219, 84),rgb(69, 69, 172),rgb(216, 216, 58),rgb(155, 67, 67)); */
+            font-family:Arial, Helvetica, sans-serif;
+            overflow: hidden;
+            
+        }
+        .heading{
+            padding:20px 20px 0px 20px;
+            color:gold;
+            letter-spacing: .3px;
+        }
+        .content{
+            padding:0px 20px 20px 20px;
+            outline:none;
+            color:yellow;
+        
+        }
+        .k{
+            padding-top:10px;
+            outline: none;
+            border:none;
+            width:100%;
+            background-color: transparent;
+            border-bottom: 2px solid aqua;
+            color:rgb(117, 206, 233); 
+            opacity: .9;
+            font-size: 16px;
+            
+        }
+        .k::placeholder{
+            color:rgb(238, 169, 229);
+            letter-spacing: 2px;
+            font-size:14px;
+        }
+        label{
+               letter-spacing: 1px;
+               color:rgb(238, 240, 100);
+               font-weight: 600;
+        }
+        button{
+                padding:13px;
+                border-radius: 10px;
+                font-size: 17.8px;
+                font-weight: 790;
+                box-shadow: 3px 3px 10px 5px gray;
+                color:rgb(7, 99, 99);
+                letter-spacing: 1px;
+                margin:20px 0px 0px 23px;
+                cursor: pointer;
+                
+        }
+      #100{
+        color:rgb(212, 59, 226);
+        background-color: rgb(101, 214, 101);;
+      }
+    </style>
+</head>
+<body>
+    <div class="karma">
+    <div class="container">
+    
+        <div class="heading">
+              <h2>Adddition of two number :</h2><br>
+         </div>
+         <div class="content">
+    <label for="num1">First Number :</label><br>
+    <input type="text" placeholder="Enter the first number " id="num1" value="" class="k">
+    <br><br>
+    <label for="num2">Second number :</label><br>
+    <input type="text" placeholder="Enter the second number " id="num2" value="" class="k">
+    <br><br>
+    <label for="100">Result :</label>
+    <br>
+    <input type="box" id="100" value='' class="k">
+    <br><br>
+    <button onclick="add()">Submit</button> 
+    <button onclick="reset()">Reset</button>
+    </div>
+    </div>
+    </div>
+
+    <script>
+        function add(){
+            let num1 = parseInt(document.getElementById('num1').value);
+            let num2 = parseInt(document.getElementById('num2').value);
+            let result = num1 + num2;
+            document.getElementById('100').value=result;
+    
+        }
+        let reset=()=>{
+            document.getElementById('num1').value="";
+            document.getElementById('num2').value="";
+            document.getElementById('100').value="";
+        }
+    </script>
+</body>
+</html>

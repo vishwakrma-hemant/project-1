@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(235, 230, 230);
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
+    nav h2 {
+      padding-left: 26px;
+      color: transparent;
+      background: linear-gradient(to left bottom, red 40%, yellow 60%, green);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    nav ul li {
+      list-style: none;
+      margin-right: 15px;
+      margin: 10px;
+    }
+    nav ul li a {
+      padding: 10px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: gray;
+    }
+
+    #home {
+      background-color: black;
+      height: 100vh;
+    }
+    .heading h3 {
+      padding-top: 46px;
+      text-align: center;
+    }
+    .home-data {
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    #about {
+      height: 100vh;
+      background-color: black;
+    }
+
+    .heading h3 {
+      height: 25px;
+      background-color: black;
+      color: aqua;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .about-data {
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    #content {
+      height: 100vh;
+      background-color: black;
+    }
+    .heading h3 {
+      text-align: center;
+      color: aqua;
+    }
+
+    .content-data {
+      color: green;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+  </style>
+  <body>
+    <nav>
+      <h2>Karma.</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#content">Contact</a></li>
+        <li><a href="#info">Information</a></li>
+      </ul>
+    </nav>
+
+    <div id="home">
+      <div class="heading"><h3>This is the home section.</h3></div>
+      <div class="home-data" style="color: green">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+        commodi, temporibus atque ad voluptatem labore, nesciunt praesentium
+        explicabo placeat laudantium dolor laborum reprehenderit aperiam
+        obcaecati nobis cupiditate pariatur quam. Ratione.
+      </div>
+    </div>
+    <div id="about">
+      <div class="heading"><h3>This is the about section.</h3></div>
+      <div class="about-data" style="color: green">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus eius
+        distinctio consectetur sint. Nemo placeat praesentium quibusdam quaerat
+        rem nam, eius modi sequi magnam delectus accusantium autem, sunt ipsum
+        amet?
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="heading"><h3>This is contact section.</h3></div>
+      <div class="content-data">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur,
+        assumenda consectetur molestias temporibus quam eius debitis inventore
+        ad quia magnam, quos hic aliquam distinctio, suscipit mollitia
+        dignissimos eaque officiis earum.
+      </div>
+    </div>
+  </body>
+</html>
